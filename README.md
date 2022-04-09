@@ -20,3 +20,5 @@ You will need to register with infracost to get an api key with - infracost regi
 Source - https://towardsdev.com/deploying-a-two-tier-architecture-using-terraform-404c93d08f07
 
 Terraform 1.1.8
+
+TODO: Sort README
