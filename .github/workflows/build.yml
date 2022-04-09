@@ -73,21 +73,21 @@ jobs:
           working_directory: ${{ matrix.tf_working_dir }}
           fail_on_error: "true"
           filter_mode: "nofilter"
-  checkov:
-    runs-on: ubuntu-18.04
-    strategy:
-      matrix:
-        tf_working_dir: [terraform]
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v2
-      - name: Run Checkov action
-        id: checkov
-        uses: bridgecrewio/checkov-action@master
-        with:
-          directory: ${{ matrix.tf_working_dir }}
-          quiet: true 
-          framework: terraform 
+  # checkov:
+  #   runs-on: ubuntu-18.04
+  #   strategy:
+  #     matrix:
+  #       tf_working_dir: [terraform]
+  #   steps:
+  #     - name: Checkout source code
+  #       uses: actions/checkout@v2
+  #     - name: Run Checkov action
+  #       id: checkov
+  #       uses: bridgecrewio/checkov-action@master
+  #       with:
+  #         directory: ${{ matrix.tf_working_dir }}
+  #         quiet: true 
+  #         framework: terraform 
   docs:
     runs-on: ubuntu-18.04
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
