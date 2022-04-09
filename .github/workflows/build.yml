@@ -91,7 +91,6 @@ jobs:
   docs:
     runs-on: ubuntu-18.04
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: [tf-plan]
     steps:
     - name: Checkout source code
       uses: actions/checkout@v2

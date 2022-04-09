@@ -32,3 +32,10 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore checks folder and contents
+checks
+**/checks
+
+# Ignore infracost files
+.infracost
